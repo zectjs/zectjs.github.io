@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zectjs-Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://zectjs.github.io/api/Template-Syntax.html">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  
+  
+  <!-- RSS -->
+  <link rel="alternative" href="/atom.xml" title="Zectjs-Site" type="application/atom+xml">
+</head>
+<body>
+
+
+	<div id="container">
+    	<header id="header" class=>
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo-min">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/" class="main-nav-link">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link current">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li><li class="main-nav-item"><a href="/blog/" class="main-nav-link">Blog</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/zectjs" class="main-nav-link">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    	<div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/api/Template-Syntax.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h3 id="if" class="article-heading">if<a class="article-anchor" href="#if" aria-hidden="true"></a></h3><p>Where insert sub-elements into parent DOM Tree or remove.<br><strong>Example</strong><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">z-if</span> <span class="attribute">is</span>=<span class="value">"&#123;expression&#125;"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- sub element --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- sub element --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">z-if</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="repeat" class="article-heading">repeat<a class="article-anchor" href="#repeat" aria-hidden="true"></a></h3><p>Repeat a template element based on an <code>Array</code> on the viewModel.</p>
+<p><strong>Example</strong><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">z-repeat</span> <span class="attribute">items</span>=<span class="value">"&#123;users&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span></span><br><span class="line">            &#123;&#123;name&#125;&#125; &#123;&#123;email&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">z-repeat</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="template" class="article-heading">template<a class="article-anchor" href="#template" aria-hidden="true"></a></h3><p><code>z-template</code> as an element holder of the viewModel. Zect will copy all attributes from <code>z-template</code> element (include <code>class</code> and <code>id</code>) to instance’s <code>$el</code>. <code>class</code> attribute will be merged.<br><strong>Example</strong><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML template--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">z-template</span> <span class="attribute">title</span>=<span class="value">"&#123;title&#125;"</span> <span class="attribute">class</span>=<span class="value">"my-component"</span>&gt;</span></span><br><span class="line">&#123;title&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- use --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">my-component</span> <span class="attribute">z-data</span>=<span class="value">"&#123;title: 'hello'&#125;"</span> <span class="attribute">class</span>=<span class="value">"comp"</span>&gt;</span><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Render result:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-component</span> <span class="attribute">title</span>=<span class="value">"hello"</span> <span class="attribute">class</span>=<span class="value">"comp my-component"</span>&gt;</span></span><br><span class="line">hello</span><br><span class="line"><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">template</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="{expression}" class="article-heading">{expression}<a class="article-anchor" href="#{expression}" aria-hidden="true"></a></h3><p>Binding data to text-content at that position. The text result of the express will be escaped.</p>
+<h3 id="{-_expression}" class="article-heading">{- expression}<a class="article-anchor" href="#{-_expression}" aria-hidden="true"></a></h3><p>Binding data to html-content at that position. Th result of the express will <code>not</code> be escaped and render to actual element.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-05-23T12:59:50.000Z" itemprop="dateModified">
+                  Last updated: 2015-05-23
+                </time>
+                <a href="i" class="article-footer-next" title="1"><span>next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-text">if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#repeat"><span class="toc-text">repeat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#template"><span class="toc-text">template</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#{expression}"><span class="toc-text">{expression}</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#{-_expression}"><span class="toc-text">{- expression}</span></a></li></ol>
+              <a href="#" id="article-toc-top">back to top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">api</strong><a href="index.html" class="sidebar-link">index</a><a href="Directives.html" class="sidebar-link">Directives</a><a href="Global-API.html" class="sidebar-link">Global-API</a><a href="Instance-Methods.html" class="sidebar-link">Instance-Methods</a><a href="Instance-Options.html" class="sidebar-link">Instance-Options</a><a href="Instance-Properties.html" class="sidebar-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="sidebar-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="sidebar-link current">Template-Syntax</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    	<footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">xx</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/zectjs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  	</div>
+  	<div id="mobile-nav-dimmer"></div>
+  	<nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link current">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li><li class="mobile-nav-item"><a href="/blog/" class="mobile-nav-link">Blog</a></li>
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/zectjs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+      
+    </ul>
+    
+      <strong class="mobile-nav-title">api</strong><a href="index.html" class="mobile-nav-link">index</a><a href="Directives.html" class="mobile-nav-link">Directives</a><a href="Global-API.html" class="mobile-nav-link">Global-API</a><a href="Instance-Methods.html" class="mobile-nav-link">Instance-Methods</a><a href="Instance-Options.html" class="mobile-nav-link">Instance-Options</a><a href="Instance-Properties.html" class="mobile-nav-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="mobile-nav-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="mobile-nav-link current">Template-Syntax</a>
+    
+  </div>
+</nav>
+
+ 
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+
+	<script src="/js/toc.js" type="text/javascript"></script>
+	<script src="/js/mobile_nav.js" type="text/javascript"></script>
+
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+
+</body>
+</html>

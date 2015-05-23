@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://zectjs.github.io/api/index.html</loc>
+    <lastmod>2015-05-23T13:03:05.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Template-Syntax.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Global-API.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Instance-Methods.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Instance-Options.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Directives.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Instance-Properties.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/api/Lifecyle-Methods.html</loc>
+    <lastmod>2015-05-23T12:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/examples/index.html</loc>
+    <lastmod>2015-05-19T11:41:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/examples/todo.html</loc>
+    <lastmod>2015-05-18T03:26:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/blog/2015/02/27/new-documentation-and-registry/</loc>
+    <lastmod>2015-05-14T16:29:23.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/index.html</loc>
+    <lastmod>2015-05-14T03:34:12.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zectjs.github.io/guide/index.html</loc>
+    <lastmod>2015-05-14T03:34:12.000Z</lastmod>
+  </url>
+  
+</urlset>

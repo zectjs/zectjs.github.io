@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Documentation | Zectjs-Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://zectjs.github.io/guide/index.html">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  
+  
+  <!-- RSS -->
+  <link rel="alternative" href="/atom.xml" title="Zectjs-Site" type="application/atom+xml">
+</head>
+<body>
+
+
+	<div id="container">
+    	<header id="header" class=>
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo-min">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/" class="main-nav-link current">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li><li class="main-nav-item"><a href="/blog/" class="main-nav-link">Blog</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/zectjs" class="main-nav-link">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    	<div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Documentation</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/guide/index.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the  <a href="troubleshooting.html">troubleshooting guide</a>, raise an issue on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a> or start a topic on the <a href="https://groups.google.com/group/hexo" target="_blank" rel="external">Google Group</a>.</p>
+<h2 id="What_is_Hexo?" class="article-heading">What is Hexo?<a class="article-anchor" href="#What_is_Hexo?" aria-hidden="true"></a></h2><p>Hexo is a fast, simple and powerful blog framework. You write posts in <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a> (or other languages) and Hexo generates static files with a beautiful theme in seconds.</p>
+<h2 id="Installation" class="article-heading">Installation<a class="article-anchor" href="#Installation" aria-hidden="true"></a></h2><p>It only takes few minutes to set up Hexo. If you encounter a problem and can’t find the solution here, please <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">submit a GitHub issue</a> and I’ll try to solve it.</p>
+<h3 id="Requirements" class="article-heading">Requirements<a class="article-anchor" href="#Requirements" aria-hidden="true"></a></h3><p>Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
+</ul>
+<p>If your computer already has these, congratulations! Just install Hexo with npm:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>If not, please follow the following instructions to install all the requirements.</p>
+<blockquote class="note warn"><strong class="note-title">For Mac users</strong><p>You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to <strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> to install command line tools.</p>
+</blockquote>
+<h3 id="Install_Git" class="article-heading">Install Git<a class="article-anchor" href="#Install_Git" aria-hidden="true"></a></h3><ul>
+<li>Windows: Download &amp; install <a href="http://code.google.com/p/msysgit/" target="_blank" rel="external">msysgit</a>.</li>
+<li>Mac: Install it with <a href="http://mxcl.github.com/homebrew/" target="_blank" rel="external">Homebrew</a>, <a href="http://www.macports.org/" target="_blank" rel="external">MacPorts</a> or <a href="http://code.google.com/p/git-osx-installer/" target="_blank" rel="external">installer</a>.</li>
+<li>Linux (Ubuntu, Debian): <code>sudo apt-get install git-core</code></li>
+<li>Linux (Fedora, Red Hat, CentOS): <code>sudo yum install git-core</code></li>
+</ul>
+<h3 id="Install_Node-js" class="article-heading">Install Node.js<a class="article-anchor" href="#Install_Node-js" aria-hidden="true"></a></h3><p>The best way to install Node.js is with <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>.</p>
+<p>cURL:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
+<p>Wget:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
+<p>Once nvm is installed, restart the terminal and run the following command to install Node.js.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nvm install <span class="number">0.12</span></span><br></pre></td></tr></table></figure>
+<p>Alternatively, download and run <a href="http://nodejs.org/" target="_blank" rel="external">the installer</a>.</p>
+<h3 id="Install_Hexo" class="article-heading">Install Hexo<a class="article-anchor" href="#Install_Hexo" aria-hidden="true"></a></h3><p>Once all the requirements are installed, you can install Hexo with npm.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-05-14T03:34:12.000Z" itemprop="dateModified">
+                  Last updated: 2015-05-14
+                </time>
+                <a href="i" class="article-footer-next" title="0"><span>next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What_is_Hexo?"><span class="toc-text">What is Hexo?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-text">Installation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Requirements"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install_Git"><span class="toc-text">Install Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install_Node-js"><span class="toc-text">Install Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install_Hexo"><span class="toc-text">Install Hexo</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">back to top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">guide</strong><a href="index.html" class="sidebar-link current">overview</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    	<footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">xx</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/zectjs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  	</div>
+  	<div id="mobile-nav-dimmer"></div>
+  	<nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link current">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li><li class="mobile-nav-item"><a href="/blog/" class="mobile-nav-link">Blog</a></li>
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/zectjs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+      
+    </ul>
+    
+      <strong class="mobile-nav-title">guide</strong><a href="index.html" class="mobile-nav-link current">overview</a>
+    
+  </div>
+</nav>
+
+ 
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+
+	<script src="/js/toc.js" type="text/javascript"></script>
+	<script src="/js/mobile_nav.js" type="text/javascript"></script>
+
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zectjs-Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://zectjs.github.io/api/Instance-Options.html">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  
+  
+  <!-- RSS -->
+  <link rel="alternative" href="/atom.xml" title="Zectjs-Site" type="application/atom+xml">
+</head>
+<body>
+
+
+	<div id="container">
+    	<header id="header" class=>
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo-min">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/" class="main-nav-link">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link current">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li><li class="main-nav-item"><a href="/blog/" class="main-nav-link">Blog</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/zectjs" class="main-nav-link">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    	<div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/api/Instance-Options.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h3 id="el" class="article-heading">el<a class="article-anchor" href="#el" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>String | HTMLElement</code></li>
+</ul>
+<p>Provide the Zect instance with an existing DOM element. It can be a CSS selector string, an actual HTMLElement, or a function that returns an HTMLElement. The resolved element will be accessible as vm.$el.</p>
+<h3 id="data" class="article-heading">data<a class="article-anchor" href="#data" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object | Function</code></li>
+</ul>
+<p>The data object for the Zect instance. It can be accessed as vm.$data:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; a: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Zect(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line">vm.$data.a === <span class="number">1</span> <span class="comment">// -&gt; true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="mixins" class="article-heading">mixins<a class="article-anchor" href="#mixins" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object</code></li>
+</ul>
+<p>Merge properties and function from given object to current viewModel’s options.</p>
+<h3 id="methods" class="article-heading">methods<a class="article-anchor" href="#methods" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object</code></li>
+</ul>
+<p>Methods to be mixed into the Zect instance. You can access these methods directly on the VM instance, or use them in directive expressions. All methods will have their this context automatically bound to the Zect instance.</p>
+<h3 id="template" class="article-heading">template<a class="article-anchor" href="#template" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object</code></li>
+</ul>
+<p>A string template to be inserted into vm.$el</p>
+<h3 id="computed" class="article-heading">computed<a class="article-anchor" href="#computed" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object</code></li>
+</ul>
+<p>Computed properties to be mixed into the Zect instance. All getters and setters have their this context automatically bound to the Zect instance. For more detail see <a href="https://github.com/switer/Zect#computed-properties" target="_blank" rel="external">Computed Properties</a></p>
+<h3 id="directives" class="article-heading">directives<a class="article-anchor" href="#directives" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object</code></li>
+</ul>
+<p>Define directives that only be used in current viewMode. About <code>directive</code> for more detailt see <a href="https://github.com/switer/Zect#custom-directive" target="_blank" rel="external">Custom Directive</a></p>
+<h3 id="components" class="article-heading">components<a class="article-anchor" href="#components" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Object</code><br>Define componens that only be used in current viewMode. About <code>component</code> for more detailt see <a href="https://github.com/switer/Zect#reusable-component" target="_blank" rel="external">Reusable Component</a></li>
+</ul>
+<h3 id="created" class="article-heading">created<a class="article-anchor" href="#created" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Function</code></li>
+</ul>
+<p>For more detail see <a href="https://github.com/switer/Zect/wiki/Lifecyle-Methods#created" target="_blank" rel="external">Lifecyle Methods/created</a></p>
+<h3 id="ready" class="article-heading">ready<a class="article-anchor" href="#ready" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Function</code></li>
+</ul>
+<p>For more detail see <a href="https://github.com/switer/Zect/wiki/Lifecyle-Methods#ready" target="_blank" rel="external">Lifecyle Methods/ready</a></p>
+<h3 id="destroy" class="article-heading">destroy<a class="article-anchor" href="#destroy" aria-hidden="true"></a></h3><ul>
+<li>Type: <code>Function</code></li>
+</ul>
+<p>For more detail see <a href="https://github.com/switer/Zect/wiki/Lifecyle-Methods#destroy" target="_blank" rel="external">Lifecyle Methods/destroy</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-05-23T12:59:50.000Z" itemprop="dateModified">
+                  Last updated: 2015-05-23
+                </time>
+                <a href="i" class="article-footer-next" title="1"><span>next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#el"><span class="toc-text">el</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#data"><span class="toc-text">data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mixins"><span class="toc-text">mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#methods"><span class="toc-text">methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#template"><span class="toc-text">template</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#computed"><span class="toc-text">computed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#directives"><span class="toc-text">directives</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#components"><span class="toc-text">components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#created"><span class="toc-text">created</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ready"><span class="toc-text">ready</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#destroy"><span class="toc-text">destroy</span></a></li></ol>
+              <a href="#" id="article-toc-top">back to top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">api</strong><a href="index.html" class="sidebar-link">index</a><a href="Directives.html" class="sidebar-link">Directives</a><a href="Global-API.html" class="sidebar-link">Global-API</a><a href="Instance-Methods.html" class="sidebar-link">Instance-Methods</a><a href="Instance-Options.html" class="sidebar-link current">Instance-Options</a><a href="Instance-Properties.html" class="sidebar-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="sidebar-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="sidebar-link">Template-Syntax</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    	<footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">xx</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/zectjs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  	</div>
+  	<div id="mobile-nav-dimmer"></div>
+  	<nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link current">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li><li class="mobile-nav-item"><a href="/blog/" class="mobile-nav-link">Blog</a></li>
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/zectjs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+      
+    </ul>
+    
+      <strong class="mobile-nav-title">api</strong><a href="index.html" class="mobile-nav-link">index</a><a href="Directives.html" class="mobile-nav-link">Directives</a><a href="Global-API.html" class="mobile-nav-link">Global-API</a><a href="Instance-Methods.html" class="mobile-nav-link">Instance-Methods</a><a href="Instance-Options.html" class="mobile-nav-link current">Instance-Options</a><a href="Instance-Properties.html" class="mobile-nav-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="mobile-nav-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="mobile-nav-link">Template-Syntax</a>
+    
+  </div>
+</nav>
+
+ 
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+
+	<script src="/js/toc.js" type="text/javascript"></script>
+	<script src="/js/mobile_nav.js" type="text/javascript"></script>
+
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+
+</body>
+</html>

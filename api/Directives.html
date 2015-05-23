@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zectjs-Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://zectjs.github.io/api/Directives.html">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  
+  
+  <!-- RSS -->
+  <link rel="alternative" href="/atom.xml" title="Zectjs-Site" type="application/atom+xml">
+</head>
+<body>
+
+
+	<div id="container">
+    	<header id="header" class=>
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo-min">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/" class="main-nav-link">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link current">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li><li class="main-nav-item"><a href="/blog/" class="main-nav-link">Blog</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/zectjs" class="main-nav-link">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    	<div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/api/Directives.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h3 id="z-on" class="article-heading">z-on<a class="article-anchor" href="#z-on" aria-hidden="true"></a></h3><p>Attaches an event listener to the element. </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">z-on</span>=<span class="value">"&#123;</span><br><span class="line">    click    : onClick;</span><br><span class="line">    mousedown: onMouseDown;</span><br><span class="line">&#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="z-show" class="article-heading">z-show<a class="article-anchor" href="#z-show" aria-hidden="true"></a></h3><p>Set the element’s display to <code>none</code> or its original value, depending on the truthy-ness of the binding’s value.</p>
+<h3 id="z-html" class="article-heading">z-html<a class="article-anchor" href="#z-html" aria-hidden="true"></a></h3><p>Updates the element’s <code>innerHTML</code>.</p>
+<blockquote>
+<p><strong>Notice:</strong> Using v-html with user-supplied data can be dangerous. It is suggested that you only use v-html when you are absolutely sure about the security of the data source, or pipe it through a custom filter that sanitizes untrusted HTML.</p>
+</blockquote>
+<h3 id="z-class" class="article-heading">z-class<a class="article-anchor" href="#z-class" aria-hidden="true"></a></h3><p>If no argument is provided, it will add the binding’s value to the element’s classList, and update the class as the value changes.</p>
+<p>If a directive argument is provided, the argument will be the class to be toggled depending on the binding value’s truthy-ness. Combined with multiple clauses this can be pretty useful:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-class</span>=<span class="value">"&#123;</span><br><span class="line">  red    : hasError;</span><br><span class="line">  bold   : isImportant;</span><br><span class="line">  hidden : isHidden;</span><br><span class="line">&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="z-attr" class="article-heading">z-attr<a class="article-anchor" href="#z-attr" aria-hidden="true"></a></h3><p>Updates the element’s given attribute (indicated by the argument).</p>
+<p><strong>Example</strong><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">v-attr</span>=<span class="value">"width:w, height:h"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="z-model" class="article-heading">z-model<a class="article-anchor" href="#z-model" aria-hidden="true"></a></h3><blockquote>
+<p>This directive can only be used on \<input\>, \<select\> or \<textarea\> elements.</textarea\></select\></input\></p>
+</blockquote>
+<p>Create a two-way binding on a form input element. Data is synced on every input event by default. </p>
+<h3 id="z-style" class="article-heading">z-style<a class="article-anchor" href="#z-style" aria-hidden="true"></a></h3><p>Apply inline CSS styles to the element.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">z-style</span>=<span class="value">"&#123;</span><br><span class="line">    fontSize: '12px';</span><br><span class="line">    color: '#333';</span><br><span class="line">&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="z-component" class="article-heading">z-component<a class="article-anchor" href="#z-component" aria-hidden="true"></a></h3><p>Compile this element as a child ViewModel with a registered component constructor. </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">z-component</span>=<span class="value">"c-header"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-05-23T12:59:50.000Z" itemprop="dateModified">
+                  Last updated: 2015-05-23
+                </time>
+                <a href="i" class="article-footer-next" title="1"><span>next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#z-on"><span class="toc-text">z-on</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-show"><span class="toc-text">z-show</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-html"><span class="toc-text">z-html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-class"><span class="toc-text">z-class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-attr"><span class="toc-text">z-attr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-model"><span class="toc-text">z-model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-style"><span class="toc-text">z-style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-component"><span class="toc-text">z-component</span></a></li></ol>
+              <a href="#" id="article-toc-top">back to top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">api</strong><a href="index.html" class="sidebar-link">index</a><a href="Directives.html" class="sidebar-link current">Directives</a><a href="Global-API.html" class="sidebar-link">Global-API</a><a href="Instance-Methods.html" class="sidebar-link">Instance-Methods</a><a href="Instance-Options.html" class="sidebar-link">Instance-Options</a><a href="Instance-Properties.html" class="sidebar-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="sidebar-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="sidebar-link">Template-Syntax</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    	<footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">xx</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/zectjs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  	</div>
+  	<div id="mobile-nav-dimmer"></div>
+  	<nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link current">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li><li class="mobile-nav-item"><a href="/blog/" class="mobile-nav-link">Blog</a></li>
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/zectjs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+      
+    </ul>
+    
+      <strong class="mobile-nav-title">api</strong><a href="index.html" class="mobile-nav-link">index</a><a href="Directives.html" class="mobile-nav-link current">Directives</a><a href="Global-API.html" class="mobile-nav-link">Global-API</a><a href="Instance-Methods.html" class="mobile-nav-link">Instance-Methods</a><a href="Instance-Options.html" class="mobile-nav-link">Instance-Options</a><a href="Instance-Properties.html" class="mobile-nav-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="mobile-nav-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="mobile-nav-link">Template-Syntax</a>
+    
+  </div>
+</nav>
+
+ 
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+
+	<script src="/js/toc.js" type="text/javascript"></script>
+	<script src="/js/mobile_nav.js" type="text/javascript"></script>
+
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+
+</body>
+</html>

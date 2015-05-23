@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zectjs-Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://zectjs.github.io/api/Global-API.html">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  
+  
+  <!-- RSS -->
+  <link rel="alternative" href="/atom.xml" title="Zectjs-Site" type="application/atom+xml">
+</head>
+<body>
+
+
+	<div id="container">
+    	<header id="header" class=>
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo-min">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/" class="main-nav-link">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link current">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li><li class="main-nav-item"><a href="/blog/" class="main-nav-link">Blog</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/zectjs" class="main-nav-link">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    	<div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/api/Global-API.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h3 id="Zect(options)" class="article-heading">Zect(options)<a class="article-anchor" href="#Zect(options)" aria-hidden="true"></a></h3><p>It is a constructor function that allows you to create Zect instances. Creating a Zect instance is straightforward:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Zect(&#123; <span class="comment">/* options */</span> &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>When you instantiate a Zect instance, you need to pass in an option object which can include information about the DOM element, data object, mixin methods, lifecycle callbacks and more. See the full list of <a href="https://github.com/switer/Zect/wiki/Instance-Options" target="_blank" rel="external">Instantiation Options</a>.</p>
+<h3 id="Zect-extend(options)" class="article-heading">Zect.extend(options)<a class="article-anchor" href="#Zect-extend(options)" aria-hidden="true"></a></h3><p>Create a “subclass” of the base Zect constructor. All instantiation options can be used here. The special cases to note here are <code>el</code> and <code>data</code>, which must be functions in this case.</p>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Profile = Zect.extend(&#123;</span><br><span class="line">  el: <span class="built_in">document</span>.createElement(<span class="string">'p'</span>),</span><br><span class="line">  template: <span class="string">'&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125; aka &#123;&#123;alias&#125;&#125;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> profile = <span class="keyword">new</span> Profile(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName : <span class="string">'Walter'</span>,</span><br><span class="line">    lastName  : <span class="string">'White'</span>,</span><br><span class="line">    alias     : <span class="string">'Heisenberg'</span></span><br><span class="line">  &#125;  </span><br><span class="line">&#125;)</span><br><span class="line">profile.$appendTo(<span class="string">'body'</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Zect-component(id,_[definition])" class="article-heading">Zect.component(id, [definition])<a class="article-anchor" href="#Zect-component(id,_[definition])" aria-hidden="true"></a></h3><p>Register or retrieve a global component. For more details see <a href="https://github.com/switer/Zect#reusable-component" target="_blank" rel="external">Reusable Component</a>.</p>
+<h3 id="Zect-namespace(namespace)" class="article-heading">Zect.namespace(namespace)<a class="article-anchor" href="#Zect-namespace(namespace)" aria-hidden="true"></a></h3><p>Change directive and template-element prefix with custom namespace. Such as:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Zect.namespace(<span class="string">'ng'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ng-if</span> <span class="attribute">is</span>=<span class="value">"&#123;show&#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">ng-attr</span>=<span class="value">"&#123;highlight: hl&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ng-if</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Zect-directive(id,_[definition])" class="article-heading">Zect.directive(id, [definition])<a class="article-anchor" href="#Zect-directive(id,_[definition])" aria-hidden="true"></a></h3><p>Register or retrieve a global custom directive.For more detail see <a href="https://github.com/switer/Zect#custom-directive" target="_blank" rel="external">Custom Directive</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-05-23T12:59:50.000Z" itemprop="dateModified">
+                  Last updated: 2015-05-23
+                </time>
+                <a href="i" class="article-footer-next" title="1"><span>next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Zect(options)"><span class="toc-text">Zect(options)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zect-extend(options)"><span class="toc-text">Zect.extend(options)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zect-component(id,_[definition])"><span class="toc-text">Zect.component(id, [definition])</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zect-namespace(namespace)"><span class="toc-text">Zect.namespace(namespace)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zect-directive(id,_[definition])"><span class="toc-text">Zect.directive(id, [definition])</span></a></li></ol>
+              <a href="#" id="article-toc-top">back to top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">api</strong><a href="index.html" class="sidebar-link">index</a><a href="Directives.html" class="sidebar-link">Directives</a><a href="Global-API.html" class="sidebar-link current">Global-API</a><a href="Instance-Methods.html" class="sidebar-link">Instance-Methods</a><a href="Instance-Options.html" class="sidebar-link">Instance-Options</a><a href="Instance-Properties.html" class="sidebar-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="sidebar-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="sidebar-link">Template-Syntax</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    	<footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">xx</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/zectjs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  	</div>
+  	<div id="mobile-nav-dimmer"></div>
+  	<nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link current">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li><li class="mobile-nav-item"><a href="/blog/" class="mobile-nav-link">Blog</a></li>
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/zectjs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+      
+    </ul>
+    
+      <strong class="mobile-nav-title">api</strong><a href="index.html" class="mobile-nav-link">index</a><a href="Directives.html" class="mobile-nav-link">Directives</a><a href="Global-API.html" class="mobile-nav-link current">Global-API</a><a href="Instance-Methods.html" class="mobile-nav-link">Instance-Methods</a><a href="Instance-Options.html" class="mobile-nav-link">Instance-Options</a><a href="Instance-Properties.html" class="mobile-nav-link">Instance-Properties</a><a href="Lifecyle-Methods.html" class="mobile-nav-link">Lifecyle-Methods</a><a href="Template-Syntax.html" class="mobile-nav-link">Template-Syntax</a>
+    
+  </div>
+</nav>
+
+ 
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+
+	<script src="/js/toc.js" type="text/javascript"></script>
+	<script src="/js/mobile_nav.js" type="text/javascript"></script>
+
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+
+</body>
+</html>

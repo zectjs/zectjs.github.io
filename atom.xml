@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Zectjs-Site]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://zectjs.github.io/"/>
+  <updated>2015-05-14T16:29:23.000Z</updated>
+  <id>http://zectjs.github.io/</id>
+  
+  <author>
+    <name><![CDATA[xx]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[New Documentation and Registry]]></title>
+    <link href="http://zectjs.github.io/blog/2015/02/27/new-documentation-and-registry/"/>
+    <id>http://zectjs.github.io/blog/2015/02/27/new-documentation-and-registry/</id>
+    <published>2015-02-27T00:00:00.000Z</published>
+    <updated>2015-05-14T16:29:23.000Z</updated>
+    <content type="html"><![CDATA[<p>The Hexo site has just been updated and changed to a brand new theme. The documentation is also updated and more detailed. Some handy features will make your browsing more convenient.</p>
+<h2 id="Official_Registry">Official Registry</h2><p>Besides the new theme, a official registry for plugins and themes finally comes. The registry makes you easier to browse and search plugins. And you can preview themes with screenshots.</p>
+<h3 id="How_to_add_my_plugin/theme_to_the_registry?">How to add my plugin/theme to the registry?</h3><p>See the following articles for more info. Your plugin/theme will be published to the registry once the pull request is merged.</p>
+<ul>
+<li><a href="/docs/themes.html#Publishing">Publish a theme</a></li>
+<li><a href="/docs/plugins.html#Publishing">Publish a plugin</a></li>
+</ul>
+<h2 id="Localization">Localization</h2><p>We have add two new languages of documentation: <a href="/zh-tw/">Tranditional Chinese (正體中文)</a> and <a href="/zh-cn/">Simplified Chinese (简体中文)</a>. Thanks to <a href="https://github.com/pinggod" target="_blank" rel="external">pinggod</a> for the Simplified Chinese translation. We very welcome you to help us translating and make more people easier to get started with Hexo! For more info, see <a href="/docs/contributing.html#Translating">translating documentation</a>.</p>
+<h2 id="Where’s_API_Documentation?">Where’s API Documentation?</h2><p>The API documentation is hidden so far. Please be patient. I’m updating it now. The new API doc will be released in a few days.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>The Hexo site has just been updated and changed to a brand new theme. The documentation is also updated and more detailed. Some handy fea]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
