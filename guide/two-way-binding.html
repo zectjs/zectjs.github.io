@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://zectjs.github.io/api/index.html">
+  <link rel="canonical" href="http://zectjs.github.io/guide/two-way-binding.html">
   <meta name="msapplication-TileColor" content="#2f83cd">
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
   <!-- CSS -->
@@ -29,7 +29,7 @@
     </h1>
     <nav id="main-nav">
       <ul>
-        <li class="main-nav-item"><a href="/guide/" class="main-nav-link">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link current">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li>
+        <li class="main-nav-item"><a href="/guide/" class="main-nav-link current">Guide</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link">Api</a></li><li class="main-nav-item"><a href="/examples/" class="main-nav-link">Examples</a></li>
         <li class="main-nav-item">
           <a href="https://github.com/zectjs" class="main-nav-link">
             GitHub
@@ -54,17 +54,17 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name"></h1>
-                <a href="https://github.com/zectjs/site/edit/master/source/api/index.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                <a href="https://github.com/zectjs/site/edit/master/source/guide/two-way-binding.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p><img src="http://switer.qiniudn.com/red-brick.jpg" alt="hero"></p>
-
+                <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"con"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">z-model</span>=<span class="value">"search"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">z-on</span>=<span class="value">"&#123;onSubmit&#125;"</span> <span class="attribute">value</span>=<span class="value">"submit"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Zect(&#123;</span><br><span class="line">    el: <span class="string">'#con'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        search: <span class="string">'Please input'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        onSubmit: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.$data.search <span class="comment">// input-value</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
               </div>
               <footer class="article-footer">
                 <time class="article-footer-updated" datetime="2015-05-27T13:21:37.000Z" itemprop="dateModified">
                   Last updated: 2015-05-27
                 </time>
-                <a href="D" class="article-footer-next" title="0"><span>next</span><i class="fa fa-chevron-right"></i></a>
+                <a href="o" class="article-footer-next" title="15"><span>next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
             </div>
           </div>
@@ -78,7 +78,7 @@
         </div>
       </article>
       <aside id="sidebar" role="navigation">
-  <div class="inner"><strong class="sidebar-title">api</strong><a href="Directives.html" class="sidebar-link">Directives</a><a href="Global-API.html" class="sidebar-link">Global API</a><a href="Instance-Methods.html" class="sidebar-link">Instance Methods</a><a href="Instance-Options.html" class="sidebar-link">Instance Options</a><a href="Instance-Properties.html" class="sidebar-link">Instance Properties</a><a href="Lifecyle-Methods.html" class="sidebar-link">Lifecyle Methods</a><a href="Template-Syntax.html" class="sidebar-link">Template Syntax</a></div>
+  <div class="inner"><strong class="sidebar-title">guide</strong><a href="overview.html" class="sidebar-link">Overview</a><a href="custom-directive.html" class="sidebar-link">Custom Directive</a><a href="two-way-binding.html" class="sidebar-link current">Two Way Binding</a><a href="filter-expression.html" class="sidebar-link">Filter Expression</a></div>
 </aside>
     </div>
   </div>
@@ -100,7 +100,7 @@
   	<nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link current">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li>
+      <li class="mobile-nav-item"><a href="/guide/" class="mobile-nav-link current">Guide</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link">Api</a></li><li class="mobile-nav-item"><a href="/examples/" class="mobile-nav-link">Examples</a></li>
       
       <li class="mobile-nav-item">
         <a href="https://github.com/zectjs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
@@ -108,7 +108,7 @@
       
     </ul>
     
-      <strong class="mobile-nav-title">api</strong><a href="Directives.html" class="mobile-nav-link">Directives</a><a href="Global-API.html" class="mobile-nav-link">Global API</a><a href="Instance-Methods.html" class="mobile-nav-link">Instance Methods</a><a href="Instance-Options.html" class="mobile-nav-link">Instance Options</a><a href="Instance-Properties.html" class="mobile-nav-link">Instance Properties</a><a href="Lifecyle-Methods.html" class="mobile-nav-link">Lifecyle Methods</a><a href="Template-Syntax.html" class="mobile-nav-link">Template Syntax</a>
+      <strong class="mobile-nav-title">guide</strong><a href="overview.html" class="mobile-nav-link">Overview</a><a href="custom-directive.html" class="mobile-nav-link">Custom Directive</a><a href="two-way-binding.html" class="mobile-nav-link current">Two Way Binding</a><a href="filter-expression.html" class="mobile-nav-link">Filter Expression</a>
     
   </div>
 </nav>
